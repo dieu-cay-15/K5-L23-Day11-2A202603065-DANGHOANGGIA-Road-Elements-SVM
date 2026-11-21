@@ -1,6 +1,6 @@
 # Phiếu QC 1 — Road v1.0
 
-Lô được kiểm (học viên): xuantoan        Người kiểm (học viên): gia (Đặng Hoàng Gia)  
+Lô được kiểm (học viên): Trịnh Xuân Toàn-2A202603121        Người kiểm (học viên): Đặng Hoàng Gia-2A202603065  
 Ngày: 2026-11-21                         Phiên bản guideline: Road v1.0  
 File được kiểm (tên + `revision` trong manifest): `xuantoan-front.zip` (`sha256: 2e69c7f6...`), `xuantoan-fisheye.zip` (`sha256: 1fea7c95...`) — `revision: 1` (`xuantoan-manifest.json`)  
 Số ảnh kiểm: 6 (`A01`, `A03`, `A04`, `B01`, `B02`, `B06`; trong đó **`B01` không có lỗi**) (+ 0 ảnh thêm)   Số nhãn đã kiểm (shape + tag): 57 (33 shape + 24 tag)  

@@ -36,7 +36,7 @@ Cách đặt tag ảnh trên bản CVAT này: Chọn công cụ **Tag** ở than
 | B11 | `lane` (bẫy ô đỗ `QC1-03`) | Các vạch trắng/vàng gạch chéo quanh ô đỗ xe người khuyết tật có gán `lane` không | **Không gán `lane`** (0 vạch làn), chỉ gán `road_curb`, `drivable` dừng ở mép cản sau và biển thông tin | Tuân thủ quy tắc mục 4: "Vạch ô đỗ không gán `lane`" để tránh lỗi nặng `QC1-03`. |
 
 ## 4. Phiếu QC 1 nhận được
-Bạn kiểm lô của tôi: xuantoan (mẫu 6 ảnh `A05, A06, A07, B03, B06, B08` — 80 nhãn)  
+Bạn kiểm lô của tôi: Trịnh Xuân Toàn - 2A202603121 (`xuantoan`) *(mẫu 6 ảnh `A05, A06, A07, B03, B06, B08` — 80 nhãn; phiếu gốc tại [xuantoan-qc1-for-gia.md](xuantoan-qc1-for-gia.md))*  
 Quyết định nhận được: **Hold (tạm thời)** *(0 lỗi nặng / 0 lỗi nhẹ đã xác nhận; chờ xác nhận bằng mắt / lead miễn `QC1-02` cho 3 ảnh `A05`, `A06`, `A07`)*  
 
 | Mã lỗi | Số lỗi | Đồng ý? | Đã sửa? |
