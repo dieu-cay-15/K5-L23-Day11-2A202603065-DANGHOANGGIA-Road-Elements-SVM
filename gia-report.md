@@ -36,9 +36,17 @@ Cách đặt tag ảnh trên bản CVAT này: Chọn công cụ **Tag** ở than
 | B11 | `lane` (bẫy ô đỗ `QC1-03`) | Các vạch trắng/vàng gạch chéo quanh ô đỗ xe người khuyết tật có gán `lane` không | **Không gán `lane`** (0 vạch làn), chỉ gán `road_curb`, `drivable` dừng ở mép cản sau và biển thông tin | Tuân thủ quy tắc mục 4: "Vạch ô đỗ không gán `lane`" để tránh lỗi nặng `QC1-03`. |
 
 ## 4. Phiếu QC 1 nhận được
-Bạn kiểm lô của tôi: *(điền sau khi ghép cặp Task 3)*  Quyết định nhận được: *(điền sau Task 3)*  
+Bạn kiểm lô của tôi: xuantoan (mẫu 6 ảnh `A05, A06, A07, B03, B06, B08` — 80 nhãn)  
+Quyết định nhận được: **Hold (tạm thời)** *(0 lỗi nặng / 0 lỗi nhẹ đã xác nhận; chờ xác nhận bằng mắt / lead miễn `QC1-02` cho 3 ảnh `A05`, `A06`, `A07`)*  
+
 | Mã lỗi | Số lỗi | Đồng ý? | Đã sửa? |
 | --- | ---: | --- | --- |
+| QC1-01 (tag camera & 4 tag) | 0 | Đồng ý (đạt 6/6 ảnh mẫu) | Không cần sửa |
+| QC1-02 (thiếu `L1`/`R1` trên `A05`, `A06`, `A07` — 4 cảnh báo `lint`) | 4 ứng viên (chưa xác nhận) | **Không đồng ý xếp lỗi (đề nghị miễn theo mục 6 hướng dẫn & CHECKPOINTS):** `A05` là phố hẹp hoàn toàn không sơn vạch làn (đã gán `road_curb` hai bên); `A06` bên phải là hàng cột cầu cạn thép không có vạch `R1`; `A07` bên trái sát dải phân cách bê tông không có vạch `L1` (đã gán `road_curb`). | **Không vẽ thêm** (không bịa vạch không tồn tại trên ảnh); đã ghi rõ mã ảnh & lý do ở Mục 3 Bảng ca khó và đề nghị coach/lead xác nhận miễn `QC1-02` để chốt **Release** (giữ nguyên `revision: 1`). |
+| QC1-03 (`position` trên `B03, B06, B08`) | 0 | Đồng ý (`B06`, `B08` dùng đúng `position = other`) | Không cần sửa |
+| QC1-12 (file, manifest, `sha256`, `contains_images`) | 0 | Đồng ý (2 file ZIP mở được, không kèm ảnh, khớp manifest) | Không cần sửa |
+
+*(Ghi chú bổ sung: phiếu của bạn `xuantoan` là lượt kiểm sơ bộ theo script/lint nên các mã hình học `QC1-04` đến `QC1-11` chưa kiểm bằng mắt; toàn bộ 28 ảnh trong lô của mình đã được tự kiểm trực quan từng ảnh đạt ≤ 2–3 px và 0 lỗi chính/nhẹ trên `road_check lint`, không phát sinh Rework nên giữ nguyên lần nộp `revision: 1`.)*
 
 ## 5. Kiểm file export
 | File | Mở lại được? | Số shape ảnh 1 (job / file) | Số shape ảnh 2 (job / file) | Tag camera có trong XML? |
